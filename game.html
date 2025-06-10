@@ -5,29 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>game</title>
-    <style>
-        #table {
-            position: absolute;
-            background-color: blanchedalmond;
-            width: 360px;
-            height: 360px;
-            border-collapse: collapse;
-            border-spacing: 0;
-        }
-
-        #go {
-            position: absolute;
-            margin: 10px;
-            width: 340px;
-            height: 340px;
-            border-collapse: collapse;
-        }
-
-        .square {
-            border: thin solid black;
-            padding: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="CSS.css">
 </head>
 
 <body>
@@ -35,28 +13,7 @@
         <table id="table"></table>
         <table id="go"></table>
     </div>
-    <script>
-        const board = document.getElementById('board')
-        const table = document.getElementById('table')
-        const go = document.getElementById('go')
-        for (var i = 0; i < 9; i++) {
-            let tr = document.createElement('tr')
-            table.appendChild(tr)
-            for (var j = 0; j < 9; j++) {
-                let td = document.createElement('td')
-                td.setAttribute('class', 'square')
-                tr.appendChild(td)
-            }
-        }
-        for (var i = 0; i < 9; i++) {
-            let tr = document.createElement('tr')
-            go.appendChild(tr)
-            for (var j = 0; j < 9; j++) {
-                let td = document.createElement('td')
-                td.setAttribute('id', i + '-' + j)
-                tr.appendChild(td)
-            }
-        }
+    <script src="JavaScript.js">
     </script>
 </body>
 
